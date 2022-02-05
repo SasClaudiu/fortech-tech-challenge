@@ -1,0 +1,140 @@
+.dropdown {
+	position: relative;
+	width: 100%;
+
+	&:hover {
+		.dropdown-menu {
+			display: block;
+		}
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 5px 10px;
+		border: 1px solid #e7e7e7;
+		border-radius: 5px;
+		transition: all 0.2s ease-in-out;
+		cursor: pointer;
+
+		&:hover {
+			border-color: #bebebe;
+		}
+	}
+
+	&__header-title {
+		h3 {
+			margin: 0;
+			padding: 5px 0;
+			font-size: 14px;
+			font-weight: 500;
+			color: #3f3f3f;
+		}
+	}
+
+	&__body {
+		position: absolute;
+		top: calc(100% + 5px);
+		left: 0;
+		width: calc(100% - 20px);
+		z-index: 1;
+		background: #fff;
+		border-radius: 5px;
+		box-shadow: 0 3px 10px #0000004a;
+		padding: 0 10px 10px 10px;
+		overflow: hidden;
+		max-height: 300px;
+		overflow-y: scroll;
+	}
+
+	&__body-search {
+		display: flex;
+		align-items: center;
+		padding: 10px 0;
+		margin-bottom: 10px;
+		top: 0;
+		position: sticky;
+		background-color: white;
+		z-index: 10;
+
+		input {
+			width: 100%;
+			padding: 0.5rem;
+			border: 1px solid #eaeaea;
+			border-radius: 5px;
+			font-size: 14px;
+			font-weight: 500;
+			color: #000;
+			outline: none;
+		}
+	}
+
+	&__body-list-selected {
+		p {
+			font-size: 12px;
+			font-weight: 700;
+		}
+
+		div.dropdown__body-list-item {
+			padding: 5px 10px;
+		}
+	}
+
+	&__body-list-item {
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		background-color: #f5f5f5;
+		border-radius: 5px;
+		transition: background-color 0.5s ease;
+		outline: none;
+		margin-bottom: 10px;
+		min-height: 30px;
+		padding: 10px 10px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&:focus-visible {
+			.checkmark {
+				border: 1px solid #f36;
+			}
+		}
+
+		h4 {
+			margin: 0;
+			font-size: 14px;
+			text-overflow: ellipsis;
+			max-width: 150px;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+
+		p {
+			margin: 0;
+			margin-top: 5px;
+			font-size: 12px;
+			font-weight: 500;
+			color: #6b6b6b;
+			text-overflow: ellipsis;
+			max-width: 150px;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+
+		&:hover {
+			background: #ececec;
+		}
+	}
+
+	&__body-list-item-checkbox {
+		margin-right: 15px;
+		cursor: pointer;
+
+		input {
+			cursor: pointer;
+		}
+	}
+}

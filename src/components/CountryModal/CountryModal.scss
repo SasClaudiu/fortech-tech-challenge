@@ -1,0 +1,112 @@
+.country-modal {
+	&__flag {
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+		padding: 5px;
+		border: 2px solid #ebebeb;
+
+		margin-bottom: 20px;
+	}
+
+	&__content {
+		display: flex;
+		width: 80vw;
+		max-width: 800px;
+		flex-direction: row;
+		padding: 30px;
+	}
+
+	&__left-area {
+		min-width: 55%;
+	}
+
+	&__info-section {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 500px;
+
+		h2:first-child {
+			display: flex;
+			align-items: center;
+			margin: 5px 0 10px 0;
+			font-size: 24px;
+			color: #f36;
+
+			span {
+				font-size: 18px;
+				margin-left: 5px;
+			}
+		}
+	}
+
+	&__right-area {
+		width: 100%;
+		margin-left: 50px;
+		margin-right: 20px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__neighbours-section {
+		height: 270px;
+		margin-bottom: 30px;
+
+		h3 {
+			margin: 5px 0;
+		}
+	}
+
+	&__neighbours-list {
+		width: 100%;
+		max-width: 500px;
+		max-height: 250px;
+		overflow-y: auto;
+	}
+
+	&__neighbour-item {
+		display: flex;
+		width: 100%;
+		max-width: 50%;
+		min-width: 100px;
+		background-color: #f1f1f1;
+		border-radius: 5px;
+		padding: 5px 10px;
+		margin: 5px 0px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		transition: background-color 0.2s ease-in-out;
+
+		span {
+			margin-left: 10px;
+			font-size: 12px;
+			color: #4d4d4d;
+			font-weight: 500;
+		}
+
+		&:hover {
+			background-color: #e7e5e5;
+		}
+	}
+
+	&__map-section {
+		height: 340px;
+		width: 300px;
+
+		h3 {
+			margin: 5px 0;
+		}
+	}
+}
+
+.leaflet-control-attribution {
+	display: none;
+}
+
+.leaflet-container {
+	border-radius: 5px;
+}

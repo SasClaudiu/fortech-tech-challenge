@@ -1,0 +1,10 @@
+.countries-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 100%;
+	padding: 32px 36px;
+	background-color: #fff;
+	max-height: calc(100vh - 450px);
+}
